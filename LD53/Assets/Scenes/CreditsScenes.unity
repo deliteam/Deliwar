@@ -424,7 +424,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1920, y: 1833.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925259577
 MonoBehaviour:
@@ -447,7 +447,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits \n\nThe hero\t\nA magic unicorn\n\nVillains\t\nMr Crawley\n\nOthers\t\nThe
-    pink zebra\nYellow Parrot\nThe limp elephant\n"
+    pink zebra\nYellow Parrot\nThe limp elephant\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr
+    Crawley\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr
+    Crawley\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr
+    Crawley\n\nVillains\t\nMr Crawley\n\nVillains\t\nMr Crawley\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -510,7 +513,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5.6801763, y: 744.12, z: 5.6417866, w: 2.7536323}
+  m_margin: {x: 5.6801763, y: 0, z: 5.6417866, w: 42.293518}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
