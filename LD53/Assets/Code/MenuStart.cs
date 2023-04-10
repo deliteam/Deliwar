@@ -9,12 +9,16 @@ public class MenuStart : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main_Scene");
     }
 
-    
-    public void QuitGame()
+       public void QuitGame()
     {
         Application.Quit();
+    }
+
+        public void Credits()
+    {
+        SceneManager.LoadScene("Credits_Scene");
     }
 }

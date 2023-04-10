@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuStart Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7574964561473983987, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7574964561473983990, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
       propertyPath: m_Camera
       value: 
