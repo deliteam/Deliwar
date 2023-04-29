@@ -71,6 +71,32 @@ namespace Code
                         return tempContainer;
                     }
                     break;
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    tempContainer = _packageContainers.Find((x) =>
+                        x.GetPackageContainerType() == PackageContainerType.ThreeAndNinePackage);
+                    if (tempContainer != null)
+                    {
+                        return tempContainer;
+                    }
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                case 14:
+                    tempContainer = _packageContainers.Find((x) =>
+                        x.GetPackageContainerType() == PackageContainerType.TenAndFourteenPackage);
+                    if (tempContainer != null)
+                    {
+                        return tempContainer;
+                    }
+                    break;
                 default:
                     tempContainer = _packageContainers.Find((x) =>
                         x.GetPackageContainerType() == PackageContainerType.ManyPackage);
