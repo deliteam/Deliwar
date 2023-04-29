@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
 namespace Code
@@ -17,6 +18,25 @@ namespace Code
         public void SetPackageState(PackageState state)
         {
             _packageState = state;
+            if (state == PackageState.Free)
+            {
+                if (_rb == null)
+                {
+                    _rb = gameObject.AddComponent<Rigidbody2D>();
+                }
+            }
+            else
+            {
+                if (_rb != null)
+                {
+                    Destroy(_rb);
+                }
+            }
+        }
+
+        public void SetForce(Vector2 force)
+        {
+            _rb.AddForce(force, ForceMode2D.Impulse);
         }
 
         private void Update()

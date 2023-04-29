@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code
@@ -19,7 +20,15 @@ namespace Code
 
         private void Update()
         {
-            CheckPackages();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                CheckPackages();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                RemovePackage();
+            }
         }
 
         private void OnDrawGizmos()
@@ -34,10 +43,15 @@ namespace Code
                 Debug.LogWarning("You are trying to add package that already added!");
                 return;
             }
-            
+
             _packages.Add(package);
             package.SetPackageState(PackageState.Picked);
-            
+
+            ReArrangePackages();
+        }
+
+        private void ReArrangePackages()
+        {
             PackageContainer packageContainer = GetPackageContainer(_packages.Count);
             if (packageContainer != _currentPackageContainer)
             {
@@ -45,8 +59,25 @@ namespace Code
                 packageContainer.gameObject.SetActive(true);
                 _currentPackageContainer = packageContainer;
             }
-            
+
             packageContainer.ArrangePackages(_packages);
+        }
+
+        private void RemovePackage()
+        {
+            if (_packages.Count <= 1)
+            {
+                Debug.LogWarning("Cant remove package. We only have one");
+                return;
+            }
+
+            int packageIndex = _packages.Count - 1;
+            Package packageToRemove = _packages[packageIndex];
+            _packages.RemoveAt(packageIndex);
+            packageToRemove.transform.SetParent(null);
+            packageToRemove.SetPackageState(PackageState.Free);
+            ReArrangePackages();
+            packageToRemove.SetForce(Vector2.left * 10);
         }
 
         private PackageContainer GetPackageContainer(int packageCount)
@@ -62,6 +93,7 @@ namespace Code
                     {
                         return tempContainer;
                     }
+
                     break;
                 case 2:
                     tempContainer = _packageContainers.Find((x) =>
@@ -70,6 +102,7 @@ namespace Code
                     {
                         return tempContainer;
                     }
+
                     break;
                 case 3:
                 case 4:
@@ -84,6 +117,7 @@ namespace Code
                     {
                         return tempContainer;
                     }
+
                     break;
                 case 10:
                 case 11:
@@ -96,6 +130,7 @@ namespace Code
                     {
                         return tempContainer;
                     }
+
                     break;
                 default:
                     tempContainer = _packageContainers.Find((x) =>
@@ -104,6 +139,7 @@ namespace Code
                     {
                         return tempContainer;
                     }
+
                     break;
             }
 
