@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code
@@ -20,7 +21,11 @@ namespace Code
                     return;
                 }
                 packages[i].transform.SetParent(referencePoint);
-                packages[i].transform.localPosition = Vector3.zero;
+                if (packages[i].transform.localPosition.magnitude > 0.1f)
+                {
+                    packages[i].transform.DOKill();
+                    packages[i].transform.DOLocalMove(Vector3.zero, 0.5f);
+                }
             }
         }
         

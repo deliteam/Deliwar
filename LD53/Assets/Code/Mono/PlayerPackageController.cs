@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -74,6 +75,7 @@ namespace Code
             int packageIndex = _packages.Count - 1;
             Package packageToRemove = _packages[packageIndex];
             _packages.RemoveAt(packageIndex);
+            packageToRemove.transform.DOKill();
             packageToRemove.transform.SetParent(null);
             packageToRemove.SetPackageState(PackageState.Free);
             ReArrangePackages();
