@@ -167,6 +167,7 @@ namespace Code
                 if (package.GetPackageState() == PackageState.Free)
                 {
                     AddPackage(package);
+                    return; //One is enough for one input.
                 }
             }
         }
