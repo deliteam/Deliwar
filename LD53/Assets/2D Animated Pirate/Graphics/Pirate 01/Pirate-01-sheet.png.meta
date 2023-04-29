@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: 29bbbd5ce2ca2984bb09a8ed1bee772d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Pirate-01-sheet_0_Hat
+  - first:
+      213: 21300002
+    second: Pirate-01-sheet_1_Head
+  - first:
+      213: 21300004
+    second: Pirate-01-sheet_2_Body
+  - first:
+      213: 21300006
+    second: Pirate-01-sheet_3_Hair
+  - first:
+      213: 21300008
+    second: Pirate-01-sheet_4_Thigh-Front
+  - first:
+      213: 21300010
+    second: Pirate-01-sheet_5_Thigh-Back
+  - first:
+      213: 21300012
+    second: Pirate-01-sheet_6
+  - first:
+      213: 21300014
+    second: Pirate-01-sheet_7
+  - first:
+      213: 21300016
+    second: Pirate-01-sheet_8_Coat
+  - first:
+      213: 21300018
+    second: Pirate-01-sheet_9_Foot-Front
+  - first:
+      213: 21300020
+    second: Pirate-01-sheet_10_Foot-Back
+  - first:
+      213: 21300022
+    second: Pirate-01-sheet_11
+  - first:
+      213: 21300024
+    second: Pirate-01-sheet_12
+  - first:
+      213: 21300026
+    second: Pirate-01-sheet_15_Face-Hurt
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pirate-01-sheet_0_Hat
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 742
+        width: 625
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee7cf589427067448f1918f417254ac
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_1_Head
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 790
+        width: 355
+        height: 394
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4b09d58bf6d7446a4824b473d40a2c
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_2_Body
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 760
+        width: 260
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce6238d20fda894a87552a0a799e325
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_3_Hair
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 384
+        height: 528
+      alignment: 9
+      pivot: {x: 0.6, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203df14e0c1efb34194d5503893f04a0
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_4_Thigh-Front
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 488
+        width: 151
+        height: 244
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bcba9808a71c442846a3d863eddda8
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_5_Thigh-Back
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 484
+        width: 151
+        height: 244
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eae638187d848f4696b52c2ede60db3
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 494
+        width: 150
+        height: 235
+      alignment: 9
+      pivot: {x: 0.57, y: 0.87}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415c741c288d47a41bcdb406bb1ccc4e
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 495
+        width: 145
+        height: 238
+      alignment: 9
+      pivot: {x: 0.5, y: 0.87}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f354e31ea983ab4287ac661ed3cd0dc
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_8_Coat
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 154
+        width: 283
+        height: 579
+      alignment: 9
+      pivot: {x: 0.65, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114f1e07dcd38b745b5e4d16e3834e11
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_9_Foot-Front
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 224
+        width: 177
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9be5a2464f3604882b1451efcf463d
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_10_Foot-Back
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 224
+        width: 177
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeff788a2f1e0f46b718767538246ce
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 251
+        width: 145
+        height: 234
+      alignment: 9
+      pivot: {x: 0.18, y: 0.95}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575b3f1ad8cd9454aad3774b68b816e3
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 251
+        width: 149
+        height: 230
+      alignment: 9
+      pivot: {x: 0.15, y: 0.92}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8be3ab46d550eb44acad380e3f32558
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pirate-01-sheet_15_Face-Hurt
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 7
+        width: 187
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9a19e64e2a23d4c9388a648f27be9f
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: af884a5e0141ad24cbe17ec95e64e714
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pirate-01-sheet_0_Hat: 21300000
+      Pirate-01-sheet_10_Foot-Back: 21300020
+      Pirate-01-sheet_11: 21300022
+      Pirate-01-sheet_12: 21300024
+      Pirate-01-sheet_15_Face-Hurt: 21300026
+      Pirate-01-sheet_1_Head: 21300002
+      Pirate-01-sheet_2_Body: 21300004
+      Pirate-01-sheet_3_Hair: 21300006
+      Pirate-01-sheet_4_Thigh-Front: 21300008
+      Pirate-01-sheet_5_Thigh-Back: 21300010
+      Pirate-01-sheet_6: 21300012
+      Pirate-01-sheet_7: 21300014
+      Pirate-01-sheet_8_Coat: 21300016
+      Pirate-01-sheet_9_Foot-Front: 21300018
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
