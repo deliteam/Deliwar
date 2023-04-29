@@ -12,16 +12,13 @@ public class EnemyPatrolling : MonoBehaviour
     private int currentWaypointIndex = 0;
 
     private float startPos;
-    // Update is called once per frame
     private void Awake() {
         startPos = this.transform.position.x;
     }
     void Update()
     {
-        // Move towards current waypoint
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, speed * Time.deltaTime);
 
-        // Check if reached the waypoint, and turn around if needed
         if (Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
         {
             if (isMovingRight)
@@ -45,7 +42,6 @@ public class EnemyPatrolling : MonoBehaviour
             }
         }
 
-        // Flip the enemy sprite based on direction
         if (isMovingRight)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
