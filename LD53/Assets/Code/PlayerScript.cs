@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
 {
     horizontalInput = Input.GetAxis("Horizontal"); // yatay girdi (A ve D tuşları veya sol ve sağ oklar)
-    jumpInput = Input.GetKey(KeyCode.Space); // zıplama girdisi (boşluk tuşu)
+    jumpInput = Input.GetKeyDown(KeyCode.Space); // zıplama girdisi (boşluk tuşu)
     // diğer kodlar buraya gelecek
 }
 void FixedUpdate()
@@ -25,7 +25,7 @@ void FixedUpdate()
     // zıplama için AddForce kullanımı
     if (jumpInput && isGrounded) // zıplama girdisi varsa ve yerdeyse
     {
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // rigidbody'ye yukarı yönde bir kuvvet uygula
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force); // rigidbody'ye yukarı yönde bir kuvvet uygula
     }
 }
 void OnTriggerEnter2D(Collider2D other)
