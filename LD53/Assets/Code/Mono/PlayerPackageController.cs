@@ -12,6 +12,7 @@ namespace Code
         [SerializeField] private List<Package> _packages;
         private PackageContainer _currentPackageContainer;
         public float collectPackageRange = 10;
+        public float enemyDetectRange = 10;
 
         private void Awake()
         {
@@ -30,11 +31,44 @@ namespace Code
             {
                 RemovePackage();
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                CheckEnemy();
+            }
+        }
+
+        private void CheckEnemy()
+        {
+            var col = Physics2D.OverlapCircle(transform.position, enemyDetectRange,
+                LayerConstants.EnemyLayerMask);
+
+            if (col)
+            {
+                AttackWithPackage(col.transform);
+            }
+        }
+
+        private void AttackWithPackage(Transform enemyTransform)
+        {
+            if (_packages.Count <= 1)
+            {
+                Debug.LogWarning("Cant remove package. We only have one");
+                return;
+            }
+
+            int packageIndex = _packages.Count - 1;
+            Package packageToRemove = _packages[packageIndex];
+            packageToRemove.transform.DOKill();
+            packageToRemove.transform.SetParent(null);
+            packageToRemove.transform.DOMove(enemyTransform.position, 0.5f).OnComplete(ReArrangePackages);
         }
 
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(transform.position, collectPackageRange);
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, enemyDetectRange);
         }
 
         private void AddPackage(Package package)
