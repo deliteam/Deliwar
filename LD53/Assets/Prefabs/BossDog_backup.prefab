@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2187483317413948919}
   m_Layer: 0
-  m_Name: BossDog_old
+  m_Name: BossDog_backup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
