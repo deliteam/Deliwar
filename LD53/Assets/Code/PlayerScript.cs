@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Code;
 using UnityEngine;
 
@@ -8,23 +9,29 @@ public enum PlayerMoveState
     Idle,
     Walk,
     Run,
-    Jump
+    Jump,
+    Attack,
+    Hurt
 }
+
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private PlayerAnimator _playerAnimator;
     [SerializeField] private PlayerPackageController _packageController;
-    
+
     [SerializeField] private PlayerMoveState _playerMoveState;
-    public Rigidbody2D rb; 
-    public float speed = 5f; 
-    public float runSpeed = 10f; 
-    public float jumpForce = 10f; 
+    public Rigidbody2D rb;
+    public float speed = 5f;
+    public float runSpeed = 10f;
+    public float jumpForce = 10f;
     public float groundCheckDistance = 1f;
-    
+    public float attackInterval = 0.5f;
+
+    private float _currentAttackInterval;
     float horizontalInput;
     bool jumpInput;
     bool isRunning;
+    bool isAttacking;
 
     public bool isGrounded = false;
 
@@ -45,12 +52,26 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+        _currentAttackInterval += Time.deltaTime;
         CheckGround();
         SetInputParams();
         CheckFlip();
         CheckJumpAction();
-        CheckAttackAction();
         CheckState();
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            StopAllCoroutines();
+            StartCoroutine(GetHurt());
+        }
+    }
+
+    private IEnumerator GetHurt()
+    {
+        _playerAnimator.SetDamagedAnim();
+        _packageController.RemovePackage();
+        yield return null;
+        _playerMoveState = PlayerMoveState.Hurt;
     }
 
     private void CheckFlip()
@@ -59,20 +80,20 @@ public class PlayerScript : MonoBehaviour
         {
             transform.localRotation = Quaternion.identity;
         }
-        else if(horizontalInput < -0.1f)
+        else if (horizontalInput < -0.1f)
         {
-            transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
+            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
-    }
-
-    private void CheckAttackAction()
-    {
-        
     }
 
     private void CheckState()
     {
-        if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
+        if (isAttacking && _playerMoveState != PlayerMoveState.Attack)
+        {
+            _playerMoveState = PlayerMoveState.Attack;
+            SetAnimation();
+        }
+        else if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
         {
             _playerMoveState = PlayerMoveState.Jump;
             SetAnimation();
@@ -104,12 +125,18 @@ public class PlayerScript : MonoBehaviour
                 break;
             case PlayerMoveState.Walk:
                 _playerAnimator.SetWalkAnim();
-                break;  
+                break;
             case PlayerMoveState.Run:
                 _playerAnimator.SetRunAnim();
                 break;
             case PlayerMoveState.Jump:
                 _playerAnimator.SetJumpAnim();
+                break;
+            case PlayerMoveState.Attack:
+                _playerAnimator.SetMeleeAttackAnim();
+                break;
+            case PlayerMoveState.Hurt:
+                _playerAnimator.SetDamagedAnim();
                 break;
             default:
                 _playerAnimator.SetIdleAnim();
@@ -127,6 +154,28 @@ public class PlayerScript : MonoBehaviour
 
     private void SetInputParams()
     {
+        if (Input.GetKeyDown(KeyCode.F) && _currentAttackInterval > attackInterval)
+        {
+            isAttacking = true;
+            _currentAttackInterval = 0;
+        }
+        else if (_currentAttackInterval < attackInterval)
+        {
+            isAttacking = true;
+        }
+        else
+        {
+            isAttacking = false;
+        }
+
+        if (isAttacking)
+        {
+            horizontalInput = 0;
+            isRunning = false;
+            jumpInput = false;
+            return;
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
         isRunning = Input.GetKey(KeyCode.LeftShift);
@@ -154,8 +203,8 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 position = rb.velocity; 
-        position.x = horizontalInput * (isRunning ? runSpeed :speed);
-        rb.velocity = position; 
+        Vector2 position = rb.velocity;
+        position.x = horizontalInput * (isRunning ? runSpeed : speed);
+        rb.velocity = position;
     }
 }

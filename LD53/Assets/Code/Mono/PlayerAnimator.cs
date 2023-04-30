@@ -22,34 +22,6 @@ namespace Code
 
         [SerializeField] private Animator[] _animators;
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                SetDamagedAnim();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                SetIdleAnim();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                SetJumpAnim();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha6))
-            {
-                SetRunAnim();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha7))
-            {
-                SetWalkAnim();
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha8))
-            {
-                SetMeleeAttackAnim();
-            }
-        }
-
         public void SetDamagedAnim()
         {
             foreach (var animator in _animators)

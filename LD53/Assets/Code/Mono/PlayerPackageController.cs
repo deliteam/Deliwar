@@ -28,11 +28,6 @@ namespace Code
                 CheckPackages();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                RemovePackage();
-            }
-
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 CheckEnemy();
@@ -100,7 +95,7 @@ namespace Code
             packageContainer.ArrangePackages(_packages);
         }
 
-        private void RemovePackage()
+        public void RemovePackage()
         {
             if (_packages.Count <= 1)
             {
