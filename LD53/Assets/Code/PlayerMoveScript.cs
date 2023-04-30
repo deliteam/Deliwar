@@ -1,4 +1,3 @@
-using System;
 using Code;
 using UnityEngine;
 
@@ -13,28 +12,25 @@ public class PlayerMoveScript : MonoBehaviour
 {
     [SerializeField] private PlayerMoveState _playerMoveState;
     public Animator[] Animators;
-    public Rigidbody2D rb; // rigidbody referansı
-    public float speed = 5f; // hareket hızı
-    public float jumpForce = 10f; // zıplama kuvveti
+    public Rigidbody2D rb; 
+    public float speed = 5f; 
+    public float jumpForce = 10f; 
     public float groundCheckDistance = 1f;
     float horizontalInput;
     bool jumpInput;
 
-    public bool isGrounded = false; // yerde mi değil mi kontrolü
+    public bool isGrounded = false;
 
-    // diğer değişkenler buraya gelecek
     void Update()
     {
         CheckGround();
         horizontalInput = Input.GetAxis("Horizontal"); // yatay girdi (A ve D tuşları veya sol ve sağ oklar)
         jumpInput = Input.GetKeyDown(KeyCode.Space); // zıplama girdisi (boşluk tuşu)
-        // diğer kodlar buraya gelecek
     
-     // zıplama için AddForce kullanımı
             
-       if (jumpInput && isGrounded) // zıplama girdisi varsa ve yerdeyse
+       if (jumpInput && isGrounded) 
        {
-           rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // rigidbody'ye yukarı yönde bir kuvvet uygula
+           rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);  
        }
 
        if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
@@ -85,11 +81,8 @@ public class PlayerMoveScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        // yatay hareket için MovePosition kullanımı
-        Vector2 position = rb.velocity; // mevcut pozisyon
-        position.x = horizontalInput * speed; // yatay girdiye göre pozisyonu güncelleme
+        Vector2 position = rb.velocity; 
+        position.x = horizontalInput * speed;
         rb.velocity = position; 
-
-   
     }
 }
