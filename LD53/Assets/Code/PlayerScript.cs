@@ -7,6 +7,7 @@ public enum PlayerMoveState
     None,
     Idle,
     Walk,
+    Run,
     Jump
 }
 public class PlayerScript : MonoBehaviour
@@ -17,10 +18,13 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private PlayerMoveState _playerMoveState;
     public Rigidbody2D rb; 
     public float speed = 5f; 
+    public float runSpeed = 10f; 
     public float jumpForce = 10f; 
     public float groundCheckDistance = 1f;
+    
     float horizontalInput;
     bool jumpInput;
+    bool isRunning;
 
     public bool isGrounded = false;
 
@@ -43,9 +47,22 @@ public class PlayerScript : MonoBehaviour
     {
         CheckGround();
         SetInputParams();
+        CheckFlip();
         CheckJumpAction();
         CheckAttackAction();
         CheckState();
+    }
+
+    private void CheckFlip()
+    {
+        if (horizontalInput > 0.1f)
+        {
+            transform.localRotation = Quaternion.identity;
+        }
+        else if(horizontalInput < -0.1f)
+        {
+            transform.localRotation = Quaternion.Euler(new Vector3(0,180,0));
+        }
     }
 
     private void CheckAttackAction()
@@ -65,9 +82,14 @@ public class PlayerScript : MonoBehaviour
             _playerMoveState = PlayerMoveState.Idle;
             SetAnimation();
         }
-        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded)
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded && !isRunning)
         {
             _playerMoveState = PlayerMoveState.Walk;
+            SetAnimation();
+        }
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Run && isGrounded && isRunning)
+        {
+            _playerMoveState = PlayerMoveState.Run;
             SetAnimation();
         }
     }
@@ -82,6 +104,9 @@ public class PlayerScript : MonoBehaviour
                 break;
             case PlayerMoveState.Walk:
                 _playerAnimator.SetWalkAnim();
+                break;  
+            case PlayerMoveState.Run:
+                _playerAnimator.SetRunAnim();
                 break;
             case PlayerMoveState.Jump:
                 _playerAnimator.SetJumpAnim();
@@ -104,6 +129,7 @@ public class PlayerScript : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
+        isRunning = Input.GetKey(KeyCode.LeftShift);
     }
 
     private void OnDrawGizmos()
@@ -129,7 +155,7 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rb.velocity; 
-        position.x = horizontalInput * speed;
+        position.x = horizontalInput * (isRunning ? runSpeed :speed);
         rb.velocity = position; 
     }
 }
