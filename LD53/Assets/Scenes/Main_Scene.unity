@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,22 +177,22 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 0
+  m_XDamping: 2.47
+  m_YDamping: 20
   m_ZDamping: 0
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.23786621
-  m_ScreenY: 0.6666665
+  m_ScreenX: 0.4778205
+  m_ScreenY: 0.8781905
   m_CameraDistance: 28.4
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 1.502379
   m_BiasX: 0
   m_BiasY: 0
-  m_CenterOnActivate: 1
+  m_CenterOnActivate: 0
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
   m_GroupFramingSize: 0.8
@@ -261,7 +261,7 @@ Camera:
   far clip plane: 1000.02
   field of view: 26.381222
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796246048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9801564, y: 1.6666651, z: -28.4}
+  m_LocalPosition: {x: -1.0096858, y: 6.429239, z: -28.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Follow: {fileID: 429634166}
   m_Lens:
     FieldOfView: 26.381222
-    OrthographicSize: 5
+    OrthographicSize: 8.5
     NearClipPlane: 0.01
     FarClipPlane: 1000.02
     Dutch: 0
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207418394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9801564, y: 1.6666651, z: -28.4}
+  m_LocalPosition: {x: -1.0096858, y: 6.429239, z: -28.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -686,14 +686,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1265242894305131255, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409137072211950538, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7989889755381233544, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
       propertyPath: m_Name
       value: Environment
@@ -741,10 +733,6 @@ PrefabInstance:
     - target: {fileID: 7989889755381233545, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501215181100347252, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a4ba6bfba5178241b2dc277fdfbfbba, type: 3}
