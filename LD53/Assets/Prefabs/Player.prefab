@@ -10334,7 +10334,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -10407,7 +10407,7 @@ MonoBehaviour:
   - {fileID: 6198745394562104809}
   rb: {fileID: 6198745396360027019}
   speed: 5
-  jumpForce: 10
+  jumpForce: 25
   groundCheckDistance: 1
   isGrounded: 0
 --- !u!1 &6198745396360295684
