@@ -28,7 +28,13 @@ public class PlayerScript : MonoBehaviour
         CheckGround();
         SetInputParams();
         CheckJumpAction();
+        CheckAttackAction();
         CheckState();
+    }
+
+    private void CheckAttackAction()
+    {
+        
     }
 
     private void CheckState()
