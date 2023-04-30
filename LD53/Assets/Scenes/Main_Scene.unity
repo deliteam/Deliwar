@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -243,9 +243,9 @@ Camera:
   m_GameObject: {fileID: 796246048}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.8569657, g: 0.9245283, b: 0.58873266, a: 0}
+  m_projectionMatrixMode: 1
   m_GateFitMode: 0
   m_FOVAxisMode: 0
   m_SensorSize: {x: 26, y: 15}
@@ -260,7 +260,7 @@ Camera:
   near clip plane: 0.01
   far clip plane: 1000.02
   field of view: 26.381222
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796246048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3687377, y: 2.2187479, z: -28.4}
+  m_LocalPosition: {x: 2.9801564, y: 1.6666651, z: -28.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -372,7 +372,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 26, y: 15}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207418394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3687377, y: 2.2187479, z: -28.4}
+  m_LocalPosition: {x: 2.9801564, y: 1.6666651, z: -28.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -629,14 +629,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5091415058846142350, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198745395424788876, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6198745396360027018, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -684,10 +676,6 @@ PrefabInstance:
     - target: {fileID: 6198745396360027023, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198745396360027023, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}

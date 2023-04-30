@@ -1,3 +1,4 @@
+using System;
 using Code;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public enum PlayerMoveState
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private PlayerAnimator _playerAnimator;
-    [SerializeField] private PlayerPackageController _packageContainer;
+    [SerializeField] private PlayerPackageController _packageController;
     
     [SerializeField] private PlayerMoveState _playerMoveState;
     public Rigidbody2D rb; 
@@ -22,6 +23,21 @@ public class PlayerScript : MonoBehaviour
     bool jumpInput;
 
     public bool isGrounded = false;
+
+    private void Awake()
+    {
+        _packageController.OnPackageContainerChanged += OnPackageContainerChanged;
+    }
+
+    private void OnPackageContainerChanged()
+    {
+        SetAnimation();
+    }
+
+    private void OnDestroy()
+    {
+        _packageController.OnPackageContainerChanged -= OnPackageContainerChanged;
+    }
 
     private void Update()
     {
@@ -42,17 +58,37 @@ public class PlayerScript : MonoBehaviour
         if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
         {
             _playerMoveState = PlayerMoveState.Jump;
-            _playerAnimator.SetJumpAnim();
+            SetAnimation();
         }
         else if (horizontalInput == 0 && _playerMoveState != PlayerMoveState.Idle && isGrounded)
         {
             _playerMoveState = PlayerMoveState.Idle;
-            _playerAnimator.SetIdleAnim();
+            SetAnimation();
         }
         else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded)
         {
             _playerMoveState = PlayerMoveState.Walk;
-            _playerAnimator.SetWalkAnim();
+            SetAnimation();
+        }
+    }
+
+    private void SetAnimation()
+    {
+        switch (_playerMoveState)
+        {
+            case PlayerMoveState.None:
+            case PlayerMoveState.Idle:
+                _playerAnimator.SetIdleAnim();
+                break;
+            case PlayerMoveState.Walk:
+                _playerAnimator.SetWalkAnim();
+                break;
+            case PlayerMoveState.Jump:
+                _playerAnimator.SetJumpAnim();
+                break;
+            default:
+                _playerAnimator.SetIdleAnim();
+                break;
         }
     }
 

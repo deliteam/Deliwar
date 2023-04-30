@@ -8,6 +8,7 @@ namespace Code
 {
     public class PlayerPackageController : MonoBehaviour
     {
+        public Action OnPackageContainerChanged;
         [SerializeField] private List<PackageContainer> _packageContainers;
         [SerializeField] private List<Package> _packages;
         private PackageContainer _currentPackageContainer;
@@ -93,6 +94,7 @@ namespace Code
                 _currentPackageContainer.gameObject.SetActive(false);
                 packageContainer.gameObject.SetActive(true);
                 _currentPackageContainer = packageContainer;
+                OnPackageContainerChanged?.Invoke();
             }
 
             packageContainer.ArrangePackages(_packages);
