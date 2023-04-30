@@ -1247,7 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7176974864384008208}
   m_Layer: 0
-  m_Name: BossFat
+  m_Name: BossRat_backup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
