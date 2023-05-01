@@ -9,6 +9,7 @@ public class TwitchIntegration : MonoBehaviour
     private GameObject targetObj;
 
     private string _channelName;
+    private bool canToggleRain = true;
 
     BaseRainScript rainScript;
 
@@ -31,9 +32,17 @@ public class TwitchIntegration : MonoBehaviour
 
         string input = chatter.message;
 
-        if (input == "!rain") {
+        if (input == "!rain" && canToggleRain) {
+            canToggleRain = false;
+            StartCoroutine(ResetRainToggle());
             rainScript.RainIntensity = (rainScript.RainIntensity == 0.0f ? 1.0f : 0.0f);
             rainScript.EnableWind = !rainScript.EnableWind;
         }
+    }
+    
+    private IEnumerator ResetRainToggle() {
+        yield return new WaitForSeconds(120.0f);
+
+        canToggleRain = true;
     }
 }
