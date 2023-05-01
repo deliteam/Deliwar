@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Code;
+using Code.EnemyDog;
 using UnityEngine;
 
 public enum PlayerMoveState
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce = 10f;
     public float groundCheckDistance = 1f;
     public float attackInterval = 0.5f;
+    public float meleeAttackRange = 2f;
 
     private float _currentAttackInterval;
     float horizontalInput;
@@ -58,15 +60,15 @@ public class PlayerScript : MonoBehaviour
         CheckFlip();
         CheckJumpAction();
         CheckState();
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            StopAllCoroutines();
-            StartCoroutine(GetHurt());
-        }
     }
 
-    private IEnumerator GetHurt()
+    public void GetHurt()
+    {
+        StopAllCoroutines();
+        StartCoroutine(GetHurtIE());
+    }
+
+    private IEnumerator GetHurtIE()
     {
         _playerAnimator.SetDamagedAnim();
         _packageController.RemovePackage();
@@ -92,26 +94,45 @@ public class PlayerScript : MonoBehaviour
         {
             _playerMoveState = PlayerMoveState.Attack;
             SetAnimation();
+            StartCoroutine(CheckEnemy());
         }
         else if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
         {
             _playerMoveState = PlayerMoveState.Jump;
             SetAnimation();
         }
-        else if (horizontalInput == 0 && _playerMoveState != PlayerMoveState.Idle && isGrounded)
+        else if (horizontalInput == 0 && _playerMoveState != PlayerMoveState.Idle && isGrounded && !isAttacking)
         {
             _playerMoveState = PlayerMoveState.Idle;
             SetAnimation();
         }
-        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded && !isRunning)
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded && !isRunning &&
+                 !isAttacking)
         {
             _playerMoveState = PlayerMoveState.Walk;
             SetAnimation();
         }
-        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Run && isGrounded && isRunning)
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Run && isGrounded && isRunning &&
+                 !isAttacking)
         {
             _playerMoveState = PlayerMoveState.Run;
             SetAnimation();
+        }
+    }
+
+    private IEnumerator CheckEnemy()
+    {
+        var col = Physics2D.OverlapCircle(transform.position, meleeAttackRange,
+            LayerConstants.EnemyLayerMask);
+
+        if (col)
+        {
+            EnemyController enemyController = col.GetComponent<EnemyController>();
+            if (enemyController)
+            {
+                yield return new WaitForSeconds(0.7f);
+                enemyController.GetHurt();
+            }
         }
     }
 
@@ -185,6 +206,7 @@ public class PlayerScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, groundCheckDistance);
+        Gizmos.DrawWireSphere(transform.position, meleeAttackRange);
     }
 
     private void CheckGround()

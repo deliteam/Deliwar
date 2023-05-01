@@ -72,6 +72,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8496957551463919974}
   - component: {fileID: 8496957551463919973}
+  - component: {fileID: 1723714859}
+  - component: {fileID: 1222578561}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -107,11 +109,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0aee874d4caf1a4199edca6be961715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
   speed: 2
   waypoints:
   - {fileID: 8496957550651207694}
   - {fileID: 8496957551394230525}
   isMovingLeft: 0
+--- !u!61 &1723714859
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496957551463919975}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1222578561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496957551463919975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9d591bbce6464eb88c1fcaef8c6064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _patrolling: {fileID: 8496957551463919973}
+  playerChaseRange: 10
+  playerAttackRange: 4
+  attackInterval: 0.7
+  speed: 2
+  knockbackDistance: 2
 --- !u!1 &8496957551468670288
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8496957551468670294}
   m_Layer: 0
-  m_Name: PatrollingEnemyDOG
+  m_Name: PatrollingEnemyDog
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

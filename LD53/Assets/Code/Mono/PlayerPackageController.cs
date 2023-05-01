@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Code.EnemyDog;
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code
@@ -14,6 +14,8 @@ namespace Code
         private PackageContainer _currentPackageContainer;
         public float collectPackageRange = 10;
         public float enemyDetectRange = 10;
+        public float rangeAttackInterval = 0.5f;
+        private float _currentRangeAttackTimer;
 
         private void Awake()
         {
@@ -23,12 +25,13 @@ namespace Code
 
         private void Update()
         {
+            _currentRangeAttackTimer += Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 CheckPackages();
             }
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (_currentRangeAttackTimer > rangeAttackInterval && Input.GetKeyDown(KeyCode.Q))
             {
                 CheckEnemy();
             }
@@ -41,11 +44,16 @@ namespace Code
 
             if (col)
             {
-                AttackWithPackage(col.transform);
+                EnemyController enemyController = col.GetComponent<EnemyController>();
+                if (enemyController)
+                {
+                    AttackWithPackage(enemyController);
+                    _currentRangeAttackTimer = 0;
+                }
             }
         }
 
-        private void AttackWithPackage(Transform enemyTransform)
+        private void AttackWithPackage(EnemyController enemy)
         {
             if (_packages.Count <= 1)
             {
@@ -57,7 +65,11 @@ namespace Code
             Package packageToRemove = _packages[packageIndex];
             packageToRemove.transform.DOKill();
             packageToRemove.transform.SetParent(null);
-            packageToRemove.transform.DOMove(enemyTransform.position, 0.5f).OnComplete(ReArrangePackages);
+            packageToRemove.transform.DOMove(enemy.transform.position, 0.2f).OnComplete(()=>
+            {
+                enemy.GetHurt();
+                ReArrangePackages(0.2f);
+            });
         }
 
         private void OnDrawGizmos()
@@ -78,10 +90,10 @@ namespace Code
             _packages.Add(package);
             package.SetPackageState(PackageState.Picked);
 
-            ReArrangePackages();
+            ReArrangePackages(0.5f);
         }
 
-        private void ReArrangePackages()
+        private void ReArrangePackages(float rearrangeDuration)
         {
             PackageContainer packageContainer = GetPackageContainer(_packages.Count);
             if (packageContainer != _currentPackageContainer)
@@ -92,7 +104,7 @@ namespace Code
                 OnPackageContainerChanged?.Invoke();
             }
 
-            packageContainer.ArrangePackages(_packages);
+            packageContainer.ArrangePackages(_packages,rearrangeDuration);
         }
 
         public void RemovePackage()
@@ -109,7 +121,7 @@ namespace Code
             packageToRemove.transform.DOKill();
             packageToRemove.transform.SetParent(null);
             packageToRemove.SetPackageState(PackageState.Free);
-            ReArrangePackages();
+            ReArrangePackages(0.5f);
             packageToRemove.SetForce(Vector2.left * 10);
         }
 
