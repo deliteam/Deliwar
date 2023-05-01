@@ -9,7 +9,7 @@ namespace Code
         [SerializeField] private PackageContainerType _containerType;
         [SerializeField] private List<Transform> _referencePoints;
 
-        public void ArrangePackages(List<Package> packages)
+        public void ArrangePackages(List<Package> packages,float arrangeDuration)
         {
             int referencePointCount = _referencePoints.Count; 
             for (var i = 0; i < referencePointCount; i++)
@@ -24,7 +24,7 @@ namespace Code
                 if (packages[i].transform.localPosition.magnitude > 0.1f)
                 {
                     packages[i].transform.DOKill();
-                    packages[i].transform.DOLocalMove(Vector3.zero, 0.5f);
+                    packages[i].transform.DOLocalMove(Vector3.zero, arrangeDuration);
                 }
             }
         }

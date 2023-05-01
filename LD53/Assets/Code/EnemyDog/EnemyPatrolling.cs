@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrolling : MonoBehaviour
-
 {
+    public bool isActive;
     public float speed = 2f;
     public Transform[] waypoints;
     public bool isMovingLeft = false;
@@ -13,6 +11,10 @@ public class EnemyPatrolling : MonoBehaviour
 
     void Update()
     {
+        if (!isActive)
+        {
+            return;
+        }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
@@ -39,13 +41,13 @@ public class EnemyPatrolling : MonoBehaviour
             }
         }
 
-        if (!isMovingLeft)
+        if (waypoints[currentWaypointIndex].position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 }

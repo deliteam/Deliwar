@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using Code;
+using Code.EnemyDog;
 using UnityEngine;
 
 public enum PlayerMoveState
@@ -7,20 +9,32 @@ public enum PlayerMoveState
     None,
     Idle,
     Walk,
-    Jump
+    Run,
+    Jump,
+    Attack,
+    Hurt
 }
+
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private PlayerAnimator _playerAnimator;
     [SerializeField] private PlayerPackageController _packageController;
-    
+
     [SerializeField] private PlayerMoveState _playerMoveState;
-    public Rigidbody2D rb; 
-    public float speed = 5f; 
-    public float jumpForce = 10f; 
+    public Rigidbody2D rb;
+    public float speed = 5f;
+    public float runSpeed = 10f;
+    public float jumpForce = 10f;
     public float groundCheckDistance = 1f;
+    public float attackInterval = 0.5f;
+    public float hurtAfterAttack = 0.5f;
+    public float meleeAttackRange = 2f;
+
+    private float _currentAttackInterval;
     float horizontalInput;
     bool jumpInput;
+    bool isRunning;
+    bool isAttacking;
 
     public bool isGrounded = false;
 
@@ -41,34 +55,85 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
+        _currentAttackInterval += Time.deltaTime;
         CheckGround();
         SetInputParams();
+        CheckFlip();
         CheckJumpAction();
-        CheckAttackAction();
         CheckState();
     }
 
-    private void CheckAttackAction()
+    public void GetHurt()
     {
-        
+        StopAllCoroutines();
+        StartCoroutine(GetHurtIE());
+    }
+
+    private IEnumerator GetHurtIE()
+    {
+        _playerAnimator.SetDamagedAnim();
+        _packageController.RemovePackage();
+        yield return null;
+        _playerMoveState = PlayerMoveState.Hurt;
+    }
+
+    private void CheckFlip()
+    {
+        if (horizontalInput > 0.1f)
+        {
+            transform.localScale = Vector3.one;
+        }
+        else if (horizontalInput < -0.1f)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void CheckState()
     {
-        if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
+        if (isAttacking && _playerMoveState != PlayerMoveState.Attack)
+        {
+            _playerMoveState = PlayerMoveState.Attack;
+            SetAnimation();
+            StartCoroutine(CheckEnemy());
+        }
+        else if (!isGrounded && _playerMoveState != PlayerMoveState.Jump)
         {
             _playerMoveState = PlayerMoveState.Jump;
             SetAnimation();
         }
-        else if (horizontalInput == 0 && _playerMoveState != PlayerMoveState.Idle && isGrounded)
+        else if (horizontalInput == 0 && _playerMoveState != PlayerMoveState.Idle && isGrounded && !isAttacking)
         {
             _playerMoveState = PlayerMoveState.Idle;
             SetAnimation();
         }
-        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded)
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Walk && isGrounded && !isRunning &&
+                 !isAttacking)
         {
             _playerMoveState = PlayerMoveState.Walk;
             SetAnimation();
+        }
+        else if (horizontalInput != 0 && _playerMoveState != PlayerMoveState.Run && isGrounded && isRunning &&
+                 !isAttacking)
+        {
+            _playerMoveState = PlayerMoveState.Run;
+            SetAnimation();
+        }
+    }
+
+    private IEnumerator CheckEnemy()
+    {
+        yield return new WaitForSeconds(hurtAfterAttack);
+        var col = Physics2D.OverlapCircle(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0), meleeAttackRange,
+            LayerConstants.EnemyLayerMask);
+
+        if (col)
+        {
+            EnemyController enemyController = col.GetComponent<EnemyController>();
+            if (enemyController)
+            {
+                enemyController.GetHurt();
+            }
         }
     }
 
@@ -83,8 +148,17 @@ public class PlayerScript : MonoBehaviour
             case PlayerMoveState.Walk:
                 _playerAnimator.SetWalkAnim();
                 break;
+            case PlayerMoveState.Run:
+                _playerAnimator.SetRunAnim();
+                break;
             case PlayerMoveState.Jump:
                 _playerAnimator.SetJumpAnim();
+                break;
+            case PlayerMoveState.Attack:
+                _playerAnimator.SetMeleeAttackAnim();
+                break;
+            case PlayerMoveState.Hurt:
+                _playerAnimator.SetDamagedAnim();
                 break;
             default:
                 _playerAnimator.SetIdleAnim();
@@ -102,14 +176,39 @@ public class PlayerScript : MonoBehaviour
 
     private void SetInputParams()
     {
+        if (Input.GetKeyDown(KeyCode.F) && _currentAttackInterval > attackInterval)
+        {
+            isAttacking = true;
+            _currentAttackInterval = 0;
+        }
+        else if (_currentAttackInterval < attackInterval)
+        {
+            isAttacking = true;
+        }
+        else
+        {
+            isAttacking = false;
+        }
+
+        if (isAttacking)
+        {
+            horizontalInput = 0;
+            isRunning = false;
+            jumpInput = false;
+            return;
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
+        isRunning = Input.GetKey(KeyCode.LeftShift);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, groundCheckDistance);
+        Gizmos.DrawWireSphere(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0),
+            meleeAttackRange);
     }
 
     private void CheckGround()
@@ -128,8 +227,8 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 position = rb.velocity; 
-        position.x = horizontalInput * speed;
-        rb.velocity = position; 
+        Vector2 position = rb.velocity;
+        position.x = horizontalInput * (isRunning ? runSpeed : speed);
+        rb.velocity = position;
     }
 }
