@@ -218,7 +218,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1efc60ef8eb5b174482a5f018b236a55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2eb514310173de64db9afebb25aafd56, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreditsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5216865921547315198, guid: 6df91e7cd20119243b45c1aa3a0314c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df91e7cd20119243b45c1aa3a0314c8, type: 3}
 --- !u!1001 &1499772093
@@ -427,6 +431,10 @@ PrefabInstance:
     - target: {fileID: -8653719598885068355, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
       propertyPath: m_Name
       value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
       propertyPath: m_RootOrder
@@ -472,6 +480,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5414269954778764503, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5414269954778764503, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1268022955165409856, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -479,6 +495,10 @@ PrefabInstance:
     - target: {fileID: -1268022955165409856, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005328069918122251, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 2d766b621a7cd094791f4d4e73a02db6, type: 3}
