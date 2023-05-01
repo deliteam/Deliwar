@@ -1,10 +1,12 @@
-# LD53
+# Deliwar
 
- X is an exciting post-apocalyptic game developed for the [Ludum Dare #53](https://ldjam.com/events/ludum-dare/53/$333272) gamejam that challenges players to merge boxes together and battle enemy forces while delivering vital supplies to safety.
+**When boxes are not delivered, they rebel. They come together to form an alliance, overcoming obstacles and killing enemies by throwing boxes, all in an effort to reach the delivery point and “deliver” themselves.** 
+
+ Deliwar is an exciting post-apocalyptic game developed for the [Ludum Dare #53](https://ldjam.com/events/ludum-dare/53/$333272) gamejam that challenges players to merge boxes together and battle enemy forces while delivering vital supplies to safety.
 
  Assemble and upgrade your own squad of boxes, merge them together to create powerful allies, and lead them on an epic journey through a dangerous and unforgiving landscape.
  
- With engaging gameplay and stunning graphics and sound effects, X offers a unique and immersive experience that will keep you entertained for hours. This project is an open-source game developed by our [team](/team.md) using Unity.
+ With engaging gameplay and stunning graphics and sound effects, Deliwar offers a unique and immersive experience that will keep you entertained for hours. This project is an open-source game developed by our [team](/team.md) using Unity.
 
  - For checking out our Ludum Dare page: <https://ldjam.com/events/ludum-dare/53/$333272>
 - For itch.io : <https://graphicedit.itch.io/ld53game>
