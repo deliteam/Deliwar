@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Game
+  - name: GameOver
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -103,8 +103,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 1920
-      height: 1079
-    spriteID: e6649fbb53e2bab44ae9079da115e686
+      height: 1080
+    spriteID: 44de5596257236a4b9c98471f67e4a44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -189,12 +189,12 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Game
-    spriteName: Game
+  - name: GameOver
+    spriteName: GameOver
     isGroup: 0
     parentIndex: -1
-    spriteID: e6649fbb53e2bab44ae9079da115e686
-    layerID: 6
+    spriteID: 44de5596257236a4b9c98471f67e4a44
+    layerID: 35
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

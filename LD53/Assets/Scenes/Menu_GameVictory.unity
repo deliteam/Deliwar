@@ -218,7 +218,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1efc60ef8eb5b174482a5f018b236a55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 643ff58d0e7dcc74596a2bb1ffb190d0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -304,6 +304,76 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1346369212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1657358937}
+    m_Modifications:
+    - target: {fileID: -8653719598885068355, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_Name
+      value: GameVictory
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4701325731150818850, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4701325731150818850, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 4843985084834002234, guid: a9b0cfdf32c9e374b9014f93b9b59ebf, type: 3}
+--- !u!4 &1657358937 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 16698eaf7fb91a04ebf86e6760e7c29c, type: 3}
+  m_PrefabInstance: {fileID: 1720470702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720470702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357,6 +427,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 16698eaf7fb91a04ebf86e6760e7c29c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6672361609627087106, guid: 16698eaf7fb91a04ebf86e6760e7c29c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1268022955165409856, guid: 16698eaf7fb91a04ebf86e6760e7c29c, type: 3}
