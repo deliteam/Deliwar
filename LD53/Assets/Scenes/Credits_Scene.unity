@@ -215,13 +215,12 @@ PrefabInstance:
     - target: {fileID: 5216865921247978081, guid: 6df91e7cd20119243b45c1aa3a0314c8, type: 3}
       propertyPath: m_text
       value: "<b>Credits </b>\n\n\n<b>Harami - Development/Art\r</b>\nharami.itch.io\r\ntwitch.tv/harami\n\n<b>monkeyD_Dcx
-        - Development</b>\n\n<b>Sercan Uysal - Art\r</b>\ninstagram.com/uysaltimsah\r\ntwitch.tv/uysaltimsah\r\ninstagram.com/uysaltimsah\n\n<b>AysArt
-        - Art\r</b>\nlinktr.ee/aysart\r\nitch.io/profile/aysart\r\ntwitch.tv/aysart\r\ngithub.com/igdiaysu\n\n<b>Sabrinart
-        - Art\r</b>\nitch.io/profile/sabrinart\r\ntwitch.tv/sabrinart\r\ninstagram.com/sabrinartisnt\n\n<b>merttCNR
-        - Development\r</b>\ngithub.com/merttCNR\r\n\r\n<b>fkavum - Development\r</b>\ngithub.com/fkavum\r\n\r\n<b>Senkeru
-        - Sound\r</b>\nitch.io/profile/senkeru\r\ntwitch.tv/senkeru\r\nsoundcloud.com/user-390440858\r\n\r\n<b>CoreFunctionsInitiated
+        - Development</b>\n\n<b>Felicite - Writer\r</b>\ngithub.com/fatihsadic\n\n<b>AysArt
+        - Art\r</b>\ntwitch.tv/aysart\r\n\n<b>Sabrinart - Art\r</b>\ntwitch.tv/sabrinart\r\n\n<b>Sercan
+        Uysal - Art\r</b>\ntwitch.tv/uysaltimsah\r\n\n<b>merttCNR - Development\r</b>\ngithub.com/merttCNR\r\n\r\n<b>fkavum
+        - Development\r</b>\ngithub.com/fkavum\r\n\r\n<b>Senkeru - Sound\r</b>\nsoundcloud.com/senkeru\n\r\n<b>CoreFunctionsInitiated
         - Development\r</b>\nRa\u015Fit Durmu\u015F\r\ngithub.com/durmusrasit\r\n\r\n<b>notDepresseDeveloper
-        - QA\r</b>\nlinktr.ee/notdepressedeveloper\r\ntwitch.tv/notdepressedeveloper\r\ngithub.com/sevilayerkan\r\n\n<b>GraphicEdit
+        - QA\r</b>\ntwitch.tv/notdepressedeveloper\r\ngithub.com/sevilayerkan\r\n\n<b>GraphicEdit
         - Team Lead</b>"
       objectReference: {fileID: 0}
     - target: {fileID: 5216865921547315185, guid: 6df91e7cd20119243b45c1aa3a0314c8, type: 3}
