@@ -93,18 +93,18 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: HealthBar_Sample_0
+  - name: HP_Handle
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 259
-      width: 172
+      x: 608
+      y: 4
+      width: 194
       height: 160
-    spriteID: 58c29c6a7d1f2be43aea1aa25ee236d0
+    spriteID: 3074a84e204f51244b5a2159e9a49795
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -113,31 +113,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 259}
-    spritePosition: {x: 0, y: 0}
-  - name: HealthBar_Sample_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 145
-      width: 574
-      height: 106
-    spriteID: 96fbc84d20ea9d642b76bb4d407fc7d9
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 145}
-    spritePosition: {x: 0, y: 0}
-  - name: HealthBar_Sample_2
+    uvTransform: {x: 608, y: 4}
+    spritePosition: {x: 8, y: 9}
+  - name: HB_Bar
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -146,9 +124,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 600
-      height: 133
-    spriteID: 16d8bb160f5dbb24e932986504542ba0
+      width: 596
+      height: 160
+    spriteID: e5e8e605b5d83e54db56b105cd45a9e7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,7 +136,29 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 0}
+    spritePosition: {x: 2, y: 0}
+  - name: HB_Fill
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 545
+      height: 124
+    spriteID: c40c80513a17f4546aa31418454fe7db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 172}
+    spritePosition: {x: 27, y: 18}
   characterData:
     bones: []
     parts: []
@@ -193,19 +193,9 @@ ScriptedImporter:
     spriteName: HP_Handle
     isGroup: 0
     parentIndex: -1
-    spriteID: 3f84fcb3a0117b74fbe06584fa0fad38
-    layerID: 2
-    mosaicPosition: {x: 4, y: 259}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: HB_Fill
-    spriteName: HB_Fill
-    isGroup: 0
-    parentIndex: -1
-    spriteID: e7a76b2e163105745baf4f8b3de7b2ec
-    layerID: 6
-    mosaicPosition: {x: 4, y: 145}
+    spriteID: 3074a84e204f51244b5a2159e9a49795
+    layerID: 20
+    mosaicPosition: {x: 608, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -213,9 +203,19 @@ ScriptedImporter:
     spriteName: HB_Bar
     isGroup: 0
     parentIndex: -1
-    spriteID: eaa16c01d3cbd3a4d9e0a90aa43aee06
-    layerID: 5
+    spriteID: e5e8e605b5d83e54db56b105cd45a9e7
+    layerID: 17
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HB_Fill
+    spriteName: HB_Fill
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c40c80513a17f4546aa31418454fe7db
+    layerID: 22
+    mosaicPosition: {x: 4, y: 172}
     flatten: 0
     isImported: 1
     isVisible: 1
