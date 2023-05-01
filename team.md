@@ -62,7 +62,11 @@
 
 - Github: https://github.com/durmusrasit
 
-### QA
+## Writer
+> - Felicite
+
+## QA
+
 > - notDepresseDeveloper
 > - Lexix
 
