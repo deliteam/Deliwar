@@ -29,8 +29,8 @@ ScriptedImporter:
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
-    spriteExtrude: 1
-    spriteMeshType: 1
+    spriteExtrude: 0
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 100
@@ -48,7 +48,7 @@ ScriptedImporter:
     flipbookColumns: 0
     ignorePngGamma: 0
     cookieMode: 0
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -101,9 +101,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2957
-      width: 1114
-      height: 282
+      y: 4
+      width: 1920
+      height: 1079
     spriteID: e6649fbb53e2bab44ae9079da115e686
     spriteBone: []
     spriteOutline: []
@@ -113,73 +113,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2957}
-    spritePosition: {x: 403, y: 656}
-  - name: Light
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2180
-      width: 1920
-      height: 769
-    spriteID: 97476c48da0e27e4094db7f8aade6e78
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2180}
-    spritePosition: {x: 0, y: 311}
-  - name: Background
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 1920
-      height: 1080
-    spriteID: 781f9767ba9fcdf49a38a8690ba0ec1f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 0}
-  - name: Background
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 1092
-      width: 1920
-      height: 1080
-    spriteID: 4d564e6a45c648f4d8be4644bd4d974b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1092}
     spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
@@ -194,7 +128,51 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 3
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
@@ -211,83 +189,13 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Game Over
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 1a34da50c2c09d6478ab8d467f008c60
-    layerID: 15
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Over
-    spriteName: 
-    isGroup: 0
-    parentIndex: 0
-    spriteID: 89b4081c55a8bb44e81968bc732e4570
-    layerID: 18
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Game
-    spriteName: 
-    isGroup: 0
-    parentIndex: 0
-    spriteID: 5b951d71c79dc9e47bc83b7f20e18d2c
-    layerID: 17
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
   - name: Game
     spriteName: Game
     isGroup: 0
     parentIndex: -1
     spriteID: e6649fbb53e2bab44ae9079da115e686
     layerID: 6
-    mosaicPosition: {x: 4, y: 2957}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Light
-    spriteName: Light
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 97476c48da0e27e4094db7f8aade6e78
-    layerID: 19
-    mosaicPosition: {x: 4, y: 2180}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Background
-    spriteName: Background
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 781f9767ba9fcdf49a38a8690ba0ec1f
-    layerID: 9
     mosaicPosition: {x: 4, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Game  Over
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 23c406b44c016a14e99ff506261c1deb
-    layerID: 3
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Background
-    spriteName: Background
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 4d564e6a45c648f4d8be4644bd4d974b
-    layerID: 1
-    mosaicPosition: {x: 4, y: 1092}
     flatten: 0
     isImported: 1
     isVisible: 1
