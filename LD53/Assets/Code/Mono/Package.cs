@@ -1,6 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Code
 {
@@ -57,5 +55,6 @@ namespace Code
     {
         Free,
         Picked,
+        Delivered
     }
 }

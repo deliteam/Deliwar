@@ -30,6 +30,7 @@ namespace Code.EnemyDog
         private PlayerScript _foundPlayer;
         public float knockbackDistance = 2f;
         private bool isDead = false;
+
         private void Awake()
         {
             healthBar.OnDead += OnDead;
@@ -52,6 +53,7 @@ namespace Code.EnemyDog
             {
                 return;
             }
+
             lastAttackTime += Time.deltaTime;
             CheckPlayer();
             _patrolling.isActive = !_isPlayerInChaseRange;
@@ -83,7 +85,8 @@ namespace Code.EnemyDog
                 else
                 {
                     _animator.SetWalkAnim();
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(_foundPlayer.transform.position.x, transform.position.y), speed * Time.deltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position,
+                        new Vector2(_foundPlayer.transform.position.x, transform.position.y), speed * Time.deltaTime);
                 }
             }
         }
@@ -94,10 +97,17 @@ namespace Code.EnemyDog
             _foundPlayer.GetHurt();
         }
 
-        public void GetHurt()
+        public void GetHurt(Transform from)
         {
+            float knockback = knockbackDistance;
+            if (from.transform.position.x > transform.position.x)
+            {
+                knockback = knockback * -1;
+            }
+
             healthBar.SetDamage(15);
-            transform.position = new Vector3(transform.position.x + knockbackDistance, transform.position.y, transform.position.z);
+            transform.position =
+                new Vector3(transform.position.x + knockback, transform.position.y, transform.position.z);
         }
 
         private void OnDrawGizmos()

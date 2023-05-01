@@ -7,7 +7,7 @@
  With engaging gameplay and stunning graphics and sound effects, X offers a unique and immersive experience that will keep you entertained for hours. This project is an open-source game developed by our [team](/team.md) using Unity.
 
  - For checking out our Ludum Dare page: <https://ldjam.com/events/ludum-dare/53/$333272>
- - For itch.io : 
+- For itch.io : <https://graphicedit.itch.io/ld53game>
 
 ## Features
 
