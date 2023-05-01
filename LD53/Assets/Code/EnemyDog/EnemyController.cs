@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Code.EnemyDog
 {
-    public enum EnemyState{
+    public enum EnemyState
+    {
         None,
         Idle,
         Walk,
         Attack,
         Die
     }
-    
+
     public class EnemyController : MonoBehaviour
     {
         [SerializeField] private EnemyAnimator _animator;
@@ -67,9 +68,9 @@ namespace Code.EnemyDog
                 }
                 else
                 {
-                    transform.localScale = new Vector3(-1,1,1);
+                    transform.localScale = new Vector3(-1, 1, 1);
                 }
-                
+
                 if (Vector2.Distance(_foundPlayer.transform.position, transform.position) < playerAttackRange)
                 {
                     if (lastAttackTime > attackInterval)
@@ -82,7 +83,7 @@ namespace Code.EnemyDog
                 else
                 {
                     _animator.SetWalkAnim();
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(_foundPlayer.transform.position.x,transform.position.y), speed * Time.deltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(_foundPlayer.transform.position.x, transform.position.y), speed * Time.deltaTime);
                 }
             }
         }
@@ -98,7 +99,7 @@ namespace Code.EnemyDog
             healthBar.SetDamage(15);
             transform.position = new Vector3(transform.position.x + knockbackDistance, transform.position.y, transform.position.z);
         }
-        
+
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(transform.position, playerChaseRange);
