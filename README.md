@@ -52,7 +52,7 @@ To be edited later
 
 For all team members and their contact informations you can checkout [team.md](/team.md)
 
-> ## Team
+## Team
 > 
 > ### Art
 > - AysArt 
