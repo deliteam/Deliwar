@@ -72,7 +72,8 @@ public class PlayerScript : MonoBehaviour
     private IEnumerator GetHurtIE()
     {
         _playerAnimator.SetDamagedAnim();
-        _packageController.RemovePackage();
+        var package = _packageController.RemovePackage();
+        package.SetForce(Vector2.left * 10);
         yield return null;
         _playerMoveState = PlayerMoveState.Hurt;
     }
@@ -132,7 +133,7 @@ public class PlayerScript : MonoBehaviour
             EnemyController enemyController = col.GetComponent<EnemyController>();
             if (enemyController)
             {
-                enemyController.GetHurt();
+                enemyController.GetHurt(transform);
             }
         }
     }
