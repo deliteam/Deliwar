@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce = 10f;
     public float groundCheckDistance = 1f;
     public float attackInterval = 0.5f;
+    public float hurtAfterAttack = 0.5f;
     public float meleeAttackRange = 2f;
 
     private float _currentAttackInterval;
@@ -80,11 +81,11 @@ public class PlayerScript : MonoBehaviour
     {
         if (horizontalInput > 0.1f)
         {
-            transform.localRotation = Quaternion.identity;
+            transform.localScale = Vector3.one;
         }
         else if (horizontalInput < -0.1f)
         {
-            transform.localRotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 
@@ -122,7 +123,8 @@ public class PlayerScript : MonoBehaviour
 
     private IEnumerator CheckEnemy()
     {
-        var col = Physics2D.OverlapCircle(transform.position, meleeAttackRange,
+        yield return new WaitForSeconds(hurtAfterAttack);
+        var col = Physics2D.OverlapCircle(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0), meleeAttackRange,
             LayerConstants.EnemyLayerMask);
 
         if (col)
@@ -130,7 +132,6 @@ public class PlayerScript : MonoBehaviour
             EnemyController enemyController = col.GetComponent<EnemyController>();
             if (enemyController)
             {
-                yield return new WaitForSeconds(0.7f);
                 enemyController.GetHurt();
             }
         }
@@ -206,7 +207,8 @@ public class PlayerScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, groundCheckDistance);
-        Gizmos.DrawWireSphere(transform.position, meleeAttackRange);
+        Gizmos.DrawWireSphere(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0),
+            meleeAttackRange);
     }
 
     private void CheckGround()

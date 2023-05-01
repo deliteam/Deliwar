@@ -41,13 +41,13 @@ public class EnemyPatrolling : MonoBehaviour
             }
         }
 
-        if (!isMovingLeft)
+        if (waypoints[currentWaypointIndex].position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 }

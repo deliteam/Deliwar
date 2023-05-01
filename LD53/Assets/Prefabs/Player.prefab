@@ -10325,8 +10325,9 @@ MonoBehaviour:
   runSpeed: 10
   jumpForce: 25
   groundCheckDistance: 1
-  attackInterval: 0.5
-  meleeAttackRange: 7
+  attackInterval: 1.2
+  hurtAfterAttack: 1
+  meleeAttackRange: 4
   isGrounded: 0
 --- !u!114 &6198745395054038851
 MonoBehaviour:
