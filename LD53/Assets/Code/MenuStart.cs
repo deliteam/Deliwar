@@ -21,4 +21,9 @@ public class MenuStart : MonoBehaviour
     {
         SceneManager.LoadScene("Credits_Scene");
     }
+
+    public void Twitch()
+    {
+        SceneManager.LoadScene("Twitch_Scene");
+    }
 }

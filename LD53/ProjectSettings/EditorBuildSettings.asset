@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits_Scene.unity
     guid: d1c5f8210ee50ab47afd61b3708d4ebe
+  - enabled: 1
+    path: Assets/Scenes/Twitch_Scene.unity
+    guid: babd9c5620add8b4685c984b6b520d74
   m_configObjects: {}

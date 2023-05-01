@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class TwitchIntegration : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private string _channelName;
 
-    // Update is called once per frame
-    void Update()
+    public void SetChannelName(string channelName)
     {
-        
+        _channelName = channelName;
+        Debug.Log("Channel Name: " + _channelName);
     }
 }

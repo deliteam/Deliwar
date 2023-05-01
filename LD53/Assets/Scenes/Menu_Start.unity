@@ -135,13 +135,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2183412972852183513, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Twitch
+      objectReference: {fileID: 0}
     - target: {fileID: 7574964561473983987, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
       propertyPath: m_Name
       value: MenuStart Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7574964561473983987, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7574964561473983990, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
       propertyPath: m_Camera
