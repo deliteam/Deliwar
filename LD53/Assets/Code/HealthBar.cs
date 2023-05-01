@@ -26,6 +26,7 @@ public class HealthBar : MonoBehaviour
 
     private void LateUpdate()
     {
+        if(playerBody != null)
         transform.position = playerBody.transform.position + new Vector3(offset.x, offset.y, transform.position.z);
     }
 
