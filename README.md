@@ -18,7 +18,7 @@
 - Fighting Enemies
 - Side Scrolling
 - Original art and sounds
-- Twitch chat integration
+- Twitch chat integration with command spam protection
 - Fullscreen mode
 - Cross platform
 
