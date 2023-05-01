@@ -102,7 +102,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 3825
+      width: 3823
       height: 1080
     spriteID: b7cb883b8f69f7941a09468492975787
     spriteBone: []
@@ -134,7 +134,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
