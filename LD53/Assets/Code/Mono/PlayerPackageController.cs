@@ -67,7 +67,7 @@ namespace Code
             packageToRemove.transform.SetParent(null);
             packageToRemove.transform.DOMove(enemy.transform.position, 0.2f).OnComplete(()=>
             {
-                enemy.GetHurt();
+                enemy.GetHurt(transform);
                 ReArrangePackages(0.2f);
             });
         }
@@ -107,12 +107,12 @@ namespace Code
             packageContainer.ArrangePackages(_packages,rearrangeDuration);
         }
 
-        public void RemovePackage()
+        public Package RemovePackage()
         {
             if (_packages.Count <= 1)
             {
                 Debug.LogWarning("Cant remove package. We only have one");
-                return;
+                return null;
             }
 
             int packageIndex = _packages.Count - 1;
@@ -122,7 +122,7 @@ namespace Code
             packageToRemove.transform.SetParent(null);
             packageToRemove.SetPackageState(PackageState.Free);
             ReArrangePackages(0.5f);
-            packageToRemove.SetForce(Vector2.left * 10);
+            return packageToRemove;
         }
 
         private PackageContainer GetPackageContainer(int packageCount)
