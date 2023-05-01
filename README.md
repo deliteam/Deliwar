@@ -6,10 +6,10 @@
 
  Assemble and upgrade your own squad of boxes, merge them together to create powerful allies, and lead them on an epic journey through a dangerous and unforgiving landscape.
  
- With engaging gameplay and stunning graphics and sound effects, Deliwar offers a unique and immersive experience that will keep you entertained for hours. This project is an open-source game developed by our [team](/team.md) using Unity.
+ With engaging gameplay and stunning graphics and sound effects, Deliwar offers a unique and immersive experience that will keep you entertained for hours. This project is an open-source game developed by our "Deli" [team](/team.md) using Unity.
 
- - For checking out our Ludum Dare page: <https://ldjam.com/events/ludum-dare/53/$333272>
-- For itch.io : <https://graphicedit.itch.io/ld53game>
+ - For checking out our Ludum Dare [page](https://ldjam.com/events/ludum-dare/53/$333272)
+- For [itch.io](https://graphicedit.itch.io/deliwar)
 
 ## Features
 
@@ -58,20 +58,26 @@ For all team members and their contact informations you can checkout [team.md](/
 > - AysArt 
 > - Sercan Uysal
 > - Sabrinart
->
+
+
 > ### Development
 > - Harami
 > - merttCNR
 > - monkeyD_Dcx
 > - Raşit Durmuş
 > - BimmerHex
->
+
+> ### Writer
+> - Felicite 
+
+
 > ### QA
 > - notDepresseDeveloper
 > - Lexix
+> 
 
 And many others...
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://user-images.githubusercontent.com/22706692/235538729-17bf14fc-b450-40c6-aa24-d79f218fc5bc.png)
