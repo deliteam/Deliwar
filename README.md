@@ -52,17 +52,23 @@ To be edited later
 
 For all team members and their contact informations you can checkout [team.md](/team.md)
 
-- GraphicEdit - Team Leader
-- Harami - Development
-- AysArt - Art
-- monkeyD_Dcx - Development
-- Sercan Uysal - Art
-- Sabrinart - Art
-- Senkeru - Sound
-- merttCNR - Development
-- fkavum - Development
-- Raşit Durmuş - Development
-- notDepresseDeveloper - QA
+## Team
+> 
+> ### Art
+> - AysArt 
+> - Sercan Uysal
+> - Sabrinart
+>
+> ### Development
+> - Harami
+> - merttCNR
+> - monkeyD_Dcx
+> - Raşit Durmuş
+> - BimmerHex
+>
+> ### QA
+> - notDepresseDeveloper
+> - Lexix
 
 And many others...
 
