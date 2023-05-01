@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Lexone.UnityTwitchChat;
+using DigitalRuby.RainMaker;
 
 public class TwitchIntegration : MonoBehaviour
 {
+    private GameObject targetObj;
+
+    string _channelName;
+
+    BaseRainScript rainScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        IRC.Instance.channel = _channelName;
+        IRC.Instance.OnChatMessage += OnChatMessage;
+        targetObj = GameObject.Find("RainPrefab2D");
+        rainScript = targetObj.GetComponent<BaseRainScript>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnChatMessage(Chatter chatter) {
+        Debug.Log($"<color=#fef83e><b>[CHAT LISTENER]</b></color> New chat message from {chatter.tags.displayName}: {chatter.message}");
+
+        string input = chatter.message;
+
+        if (input == "!rain") {
+            rainScript.RainIntensity = (rainScript.RainIntensity == 0.0f ? 1.0f : 0.0f);
+            rainScript.EnableWind = !rainScript.EnableWind;
+        }
+    }
+
+    public void SetChannelName(string channelName) {
+        _channelName = channelName;
     }
 }
