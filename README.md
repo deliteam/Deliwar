@@ -56,10 +56,10 @@ For all team members and their contact informations you can checkout [team.md](/
 - monkeyD_Dcx - Development
 - Sercan Uysal - Art
 - Sabrinart - Art
+- Senkeru - Sound
 - merttCNR - Development
 - fkavum - Development
 - Raşit Durmuş - Development
-- Senkeru - Sound
 - notDepresseDeveloper - QA
 
 And many others...
