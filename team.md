@@ -1,9 +1,14 @@
 # Team Members
 
-#### GraphicEdit - Team Lead
+## Team Lead
+
+GraphicEdit 
+
 ---
 
-#### AysArt - Art
+## Art
+
+#### AysArt 
 
 ---
 
@@ -11,21 +16,6 @@
 - itch.io: <https://itch.io/profile/aysart>
 - Twitch: <https://www.twitch.tv/aysart>
 - Github: <https://github.com/igdiaysu>
-
-#### fkavum - Development
-
----
-
-- Github: <https://github.com/fkavum>
-
-####  Harami - Development/Art
----
-
-- itch.io: <https://harami.itch.io/>
-- Twitch: <https://www.twitch.tv/harami>
-
-####  monkeyD_Dcx - Development
----
 
 #### Sercan Uysal - Art
 ---
@@ -41,6 +31,18 @@
 - itch.io: <https://itch.io/profile/sabrinart>
 - Twitch: <https://www.twitch.tv/sabrinart>
 - Instagram: <https://www.instagram.com/sabrinartisnt/>
+
+
+## Development
+
+#### fkavum - Development
+
+---
+
+- Github: <https://github.com/fkavum>
+
+####  monkeyD_Dcx - Development
+---
 
 #### merttCNR - Development
 ---
@@ -69,3 +71,12 @@
 - Contact info: <https://linktr.ee/notdepressedeveloper>
 - Twitch: <https://www.twitch.tv/notdepressedeveloper>
 - Github: https://github.com/sevilayerkan
+
+#### Lexix
+---
+
+#### BimmerHex - Development
+---
+- Github: https://github.com/BimmerHex
+
+
