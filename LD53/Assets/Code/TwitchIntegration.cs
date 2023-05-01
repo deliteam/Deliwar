@@ -15,7 +15,12 @@ public class TwitchIntegration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IRC.Instance.channel = _channelName;
+        if (string.IsNullOrEmpty(SubmitChannelName.channelName)) 
+        { 
+            Debug.LogWarning("bos"); 
+        }
+
+        IRC.Instance.channel = SubmitChannelName.channelName;
         IRC.Instance.OnChatMessage += OnChatMessage;
         targetObj = GameObject.Find("RainPrefab2D");
         rainScript = targetObj.GetComponent<BaseRainScript>();
@@ -30,9 +35,5 @@ public class TwitchIntegration : MonoBehaviour
             rainScript.RainIntensity = (rainScript.RainIntensity == 0.0f ? 1.0f : 0.0f);
             rainScript.EnableWind = !rainScript.EnableWind;
         }
-    }
-
-    public void SetChannelName(string channelName) {
-        _channelName = channelName;
     }
 }
