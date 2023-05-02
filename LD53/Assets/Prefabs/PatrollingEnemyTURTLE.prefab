@@ -130,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.68}
+  m_Offset: {x: 0.16848993, y: 2.017768}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -141,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1, y: 2.56}
+  m_Size: {x: 2.76302, y: 1.2355344}
   m_EdgeRadius: 0
 --- !u!114 &1236614348
 MonoBehaviour:
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 347766717777031808, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.00025999546
+      value: -0.00032103062
       objectReference: {fileID: 0}
     - target: {fileID: 347766717777031808, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -442,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: 0098a1a3eade60b40b45f5746edb9ccc, type: 2}
     - target: {fileID: 2116654236230187808, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.0011849403
+      value: 0.0011239052
       objectReference: {fileID: 0}
     - target: {fileID: 2116654236230187808, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5356802071659561547, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.07079983
+      value: 0.07073879
       objectReference: {fileID: 0}
     - target: {fileID: 5356802071659561547, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -530,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8126531729290234091, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.004424989
+      value: -0.004302919
       objectReference: {fileID: 0}
     - target: {fileID: 8126531729290234091, guid: 1e45fb4379047a249a07a9778e1ab5ae, type: 3}
       propertyPath: m_Bounds.m_Center.y
