@@ -62,7 +62,7 @@ namespace Code
             {
                 Debug.LogWarning("Cant remove package. We only have one");
 
-                SceneManager.LoadScene("Menu_GameOver");
+                //SceneManager.LoadScene("Menu_GameOver");
                 return;
             }
 
@@ -117,7 +117,7 @@ namespace Code
             if (_packages.Count <= 1)
             {
                 Debug.LogWarning("Cant remove package. We only have one");
-                SceneManager.LoadScene("Menu_GameOver");
+                //SceneManager.LoadScene("Menu_GameOver");
                 return null;
             }
 
