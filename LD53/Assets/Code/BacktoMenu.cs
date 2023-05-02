@@ -9,6 +9,22 @@ public class BacktoMenu : MonoBehaviour
    
     public void Back()
     {
-        SceneManager.LoadScene("Menu_Start");
+        //SceneManager.LoadScene("Menu_GameVictory");
+		
     }
+	
+	
+	private void OnTriggerEnter2D(Collider2D collision)
+{
+
+        SceneManager.LoadScene("Menu_GameVictory");
+   
+    
+}
+	
+	
+	
+	
+	
+	
  }

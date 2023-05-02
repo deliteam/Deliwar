@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Code.EnemyDog;
 using DG.Tweening;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Code
 {
@@ -58,6 +61,8 @@ namespace Code
             if (_packages.Count <= 1)
             {
                 Debug.LogWarning("Cant remove package. We only have one");
+
+                SceneManager.LoadScene("Menu_GameOver");
                 return;
             }
 
@@ -65,7 +70,7 @@ namespace Code
             Package packageToRemove = _packages[packageIndex];
             packageToRemove.transform.DOKill();
             packageToRemove.transform.SetParent(null);
-            packageToRemove.transform.DOMove(enemy.transform.position, 0.2f).OnComplete(()=>
+            packageToRemove.transform.DOMove(enemy.transform.position, 0.2f).OnComplete(() =>
             {
                 enemy.GetHurt(transform);
                 ReArrangePackages(0.2f);
@@ -104,7 +109,7 @@ namespace Code
                 OnPackageContainerChanged?.Invoke();
             }
 
-            packageContainer.ArrangePackages(_packages,rearrangeDuration);
+            packageContainer.ArrangePackages(_packages, rearrangeDuration);
         }
 
         public Package RemovePackage()
@@ -112,6 +117,7 @@ namespace Code
             if (_packages.Count <= 1)
             {
                 Debug.LogWarning("Cant remove package. We only have one");
+                SceneManager.LoadScene("Menu_GameOver");
                 return null;
             }
 

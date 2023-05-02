@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Twitch_Scene.unity
     guid: babd9c5620add8b4685c984b6b520d74
+  - enabled: 1
+    path: Assets/Scenes/Menu_GameOver.unity
+    guid: 3a8cc6e2ca370e943b74ea00975332d8
+  - enabled: 1
+    path: Assets/Scenes/Menu_GameVictory.unity
+    guid: e2158173b8429ea42a33a09b58c18c10
   m_configObjects: {}

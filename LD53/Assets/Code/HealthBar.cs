@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
@@ -37,6 +38,7 @@ public class HealthBar : MonoBehaviour
         {
             CurrentHealth = 0;
             OnDead?.Invoke();
+			SceneManager.LoadScene("Menu_GameOver");
         }
         healthSlider.value = CurrentHealth;
     }
