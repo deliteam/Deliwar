@@ -125,7 +125,7 @@ public class PlayerScript : MonoBehaviour
     private IEnumerator CheckEnemy()
     {
         yield return new WaitForSeconds(hurtAfterAttack);
-        var col = Physics2D.OverlapCircle(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0), meleeAttackRange,
+        var col = Physics2D.OverlapCircle(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0, 0), meleeAttackRange,
             LayerConstants.EnemyLayerMask);
 
         if (col)
@@ -208,7 +208,7 @@ public class PlayerScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, groundCheckDistance);
-        Gizmos.DrawWireSphere(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0,0),
+        Gizmos.DrawWireSphere(transform.position + new Vector3(transform.localScale.x * meleeAttackRange, 0, 0),
             meleeAttackRange);
     }
 

@@ -38,7 +38,7 @@ public class HealthBar : MonoBehaviour
         {
             CurrentHealth = 0;
             OnDead?.Invoke();
-			SceneManager.LoadScene("Menu_GameOver");
+			
         }
         healthSlider.value = CurrentHealth;
     }
