@@ -74,11 +74,13 @@ public class PlayerScript : MonoBehaviour
     {
         _playerAnimator.SetDamagedAnim();
         var package = _packageController.RemovePackage();
-        package.SetForce(Vector2.left * 10);
-        yield return null;
-        _playerMoveState = PlayerMoveState.Hurt;
-
-        if (_packageController.PackageCount == 1)
+        if (package)
+        {
+            package.SetForce(Vector2.left * 10);
+            yield return null;
+        }
+        _playerMoveState = PlayerMoveState.Hurt;    
+        if (_packageController.PackageCount <= 1)
         {
             SceneManager.LoadScene("Menu_GameOver");
         }
