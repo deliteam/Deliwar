@@ -19,7 +19,7 @@ namespace Code
         public float enemyDetectRange = 10;
         public float rangeAttackInterval = 0.5f;
         private float _currentRangeAttackTimer;
-
+        public int PackageCount => _packages.Count;
         private void Awake()
         {
             _currentPackageContainer = GetPackageContainer(_packages.Count);

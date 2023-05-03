@@ -3,6 +3,7 @@ using System.Collections;
 using Code;
 using Code.EnemyDog;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum PlayerMoveState
 {
@@ -76,6 +77,11 @@ public class PlayerScript : MonoBehaviour
         package.SetForce(Vector2.left * 10);
         yield return null;
         _playerMoveState = PlayerMoveState.Hurt;
+
+        if (_packageController.PackageCount == 1)
+        {
+            SceneManager.LoadScene("Menu_GameOver");
+        }
     }
 
     private void CheckFlip()
