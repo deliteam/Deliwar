@@ -31,14 +31,18 @@ namespace Code.EnemyDog
         public float knockbackDistance = 2f;
         private bool isDead = false;
 
+        private Collider2D collider;
+
         private void Awake()
         {
+            collider = GetComponent<BoxCollider2D>();
             healthBar.OnDead += OnDead;
         }
 
         private void OnDead()
         {
             isDead = true;
+            collider.enabled = false;
             _animator.SetDeadAnim();
         }
 

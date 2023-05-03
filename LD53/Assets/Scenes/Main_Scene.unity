@@ -1090,6 +1090,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e4919ab8316534b984c3d9b0130f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &406722569 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1723714859, guid: b954850cdf208ab4b8735876b929a87b, type: 3}
+  m_PrefabInstance: {fileID: 1723714857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &429634166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6198745396360027018, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
@@ -1939,6 +1944,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!1 &964477961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,6 +2119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000271722, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 1968165653}
     - target: {fileID: 607273484769089578, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3417,6 +3427,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!114 &1604350800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3439,6 +3450,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!1 &1609797619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,6 +3679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1222578561, guid: b954850cdf208ab4b8735876b929a87b, type: 3}
+      propertyPath: Collider
+      value: 
+      objectReference: {fileID: 406722569}
     - target: {fileID: 607273484932725367, guid: b954850cdf208ab4b8735876b929a87b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4592,6 +4608,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &1968165653 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1000271723, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+  m_PrefabInstance: {fileID: 1000271716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2000654020
 PrefabInstance:
   m_ObjectHideFlags: 0
