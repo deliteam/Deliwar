@@ -18,6 +18,10 @@ namespace Code
             if (packageController)
             {
                 var package =  packageController.RemovePackage();
+                if (package == null)
+                {
+                    return;
+                }
                 package.SetPackageState(PackageState.Delivered);
                 package.transform.DOMove(deliveryPoint.position, 0.5f);
                 deliveredPackage = package;
