@@ -41,7 +41,7 @@ public class TwitchIntegration : MonoBehaviour
     }
     
     private IEnumerator ResetRainToggle() {
-        yield return new WaitForSeconds(120.0f);
+        yield return new WaitForSeconds(10.0f);
 
         canToggleRain = true;
     }

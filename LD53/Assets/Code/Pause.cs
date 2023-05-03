@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-
+    [SerializeField] GameObject controlsPanel;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !controlsPanel.activeSelf)
         {
             SceneManager.LoadScene("Menu_Start");
         }
