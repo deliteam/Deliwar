@@ -13,6 +13,7 @@ public class ActionZone : MonoBehaviour
     void Start()
     {
       audioSource = GetComponent<AudioSource>();
+      
     }
 
   	private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +23,7 @@ public class ActionZone : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-       audioSource.Stop();
+       //audioSource.Stop();
     }
 
 

@@ -446,6 +446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PatrollingEnemyTURTLE2
       objectReference: {fileID: 0}
+    - target: {fileID: 8496957551468670288, guid: f69cf11e116c7194bbc7245fa02e6dd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8496957551468670294, guid: f69cf11e116c7194bbc7245fa02e6dd4, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1944,6 +1948,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!1 &964477961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,9 +2135,65 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1723755481380426420, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8136786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723755481380426420, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5813151
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192094827556386873, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8219637
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192094827556386873, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.56953984
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480345708508420964, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9502529
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480345708508420964, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.31147948
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826450912039358724, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9981467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826450912039358724, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.060854465
+      objectReference: {fileID: 0}
+    - target: {fileID: 5187263632172268132, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13820474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5187263632172268132, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9904037
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369028730035922886, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0141458865
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061524436026976680, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.89258957
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061524436026976680, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.45087013
+      objectReference: {fileID: 0}
     - target: {fileID: 8496957551468670288, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
       propertyPath: m_Name
       value: PatrollingEnemyRAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496957551468670288, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8496957551468670294, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
       propertyPath: m_RootOrder
@@ -2177,6 +2238,14 @@ PrefabInstance:
     - target: {fileID: 8496957551468670294, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132211608544381835, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9653271
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132211608544381835, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2610435
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f08e9f0a9fd7614183af7c334684006, type: 3}
@@ -2635,6 +2704,10 @@ PrefabInstance:
     - target: {fileID: 8496957551468670288, guid: f69cf11e116c7194bbc7245fa02e6dd4, type: 3}
       propertyPath: m_Name
       value: PatrollingEnemyTURTLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496957551468670288, guid: f69cf11e116c7194bbc7245fa02e6dd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8496957551468670294, guid: f69cf11e116c7194bbc7245fa02e6dd4, type: 3}
       propertyPath: m_RootOrder
@@ -3426,6 +3499,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!114 &1604350800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,6 +3522,7 @@ MonoBehaviour:
   hurtTimeAfterAttack: 0.5
   speed: 10
   knockbackDistance: 2
+  Collider: {fileID: 0}
 --- !u!1 &1609797619
 GameObject:
   m_ObjectHideFlags: 0
@@ -12072,6 +12147,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2444224782531126276, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9470c47632e656f47bbbbea1aebb760d, type: 3}
     - target: {fileID: 2444224782531126276, guid: bbe3b53a1a6d83940b0f8c397dd8b2b8, type: 3}
       propertyPath: BypassReverbZones
       value: 1
