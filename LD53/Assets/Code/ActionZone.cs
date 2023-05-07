@@ -18,8 +18,12 @@ public class ActionZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //audioSource.Stop();
-        audioSource.PlayOneShot(audioClip, 0.7F);
+
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)

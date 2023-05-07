@@ -1,35 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFootstepSound : MonoBehaviour
+namespace Code
 {
-    List<UnityEngine.KeyCode> keys = new List<UnityEngine.KeyCode>();
-
-    private AudioSource audioSource;
-    public AudioClip steps;
-
-    void Start()
+    public class PlayerFootstepSound : MonoBehaviour
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
 
-        keys.Add(KeyCode.W);
-        keys.Add(KeyCode.S);
-        keys.Add(KeyCode.A);
-        keys.Add(KeyCode.D);
-        keys.Add(KeyCode.UpArrow);
-        keys.Add(KeyCode.DownArrow);
-        keys.Add(KeyCode.LeftArrow);
-        keys.Add(KeyCode.RightArrow);
-    }
+        AudioSource audioSource;
 
-    void Update()
-    {
-        if (keys.Exists(key => Input.GetKeyDown(key)))
+
+        void Start()
         {
-            audioSource.PlayOneShot(steps, 0.7F);
+            audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
         }
 
+        void Update()
+        {
+            audioSource.Pause();
 
+            if ((Input.GetAxisRaw("Horizontal") != 0))
+            {
+                audioSource.UnPause();
+
+            }
+
+
+
+        }
     }
 }
