@@ -19,9 +19,10 @@ namespace Code
         void Update()
         {
 
-            if ((Input.GetKeyDown("f")) || (Input.GetKeyDown("q")))
+            if ((Input.GetKeyUp("f")) || (Input.GetKey("q")))
             {
                 audioSource.PlayOneShot(attack, 0.7F);
+                // audioSource.Play();
 
             }
 
