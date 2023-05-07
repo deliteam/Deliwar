@@ -355,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: c4e93ba89ad9c664a87b30e175b45385, type: 3}
   m_Color: {r: 0.8207547, g: 0.14324492, b: 0.66440636, a: 0.6392157}
   m_FlipX: 0
@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53292adda9e4f639ed7f9bfff1569cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeliveryIndicator: {fileID: 0}
   deliveryPoint: {fileID: 4825328802579371968}
 --- !u!61 &601208615750128916
 BoxCollider2D:
@@ -490,6 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53292adda9e4f639ed7f9bfff1569cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeliveryIndicator: {fileID: 0}
   deliveryPoint: {fileID: 6093816343039730348}
 --- !u!114 &7555526892680637015
 MonoBehaviour:
@@ -503,6 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53292adda9e4f639ed7f9bfff1569cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeliveryIndicator: {fileID: 0}
   deliveryPoint: {fileID: 8035440410641276490}
 --- !u!114 &103322035293555762
 MonoBehaviour:
@@ -516,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53292adda9e4f639ed7f9bfff1569cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeliveryIndicator: {fileID: 0}
   deliveryPoint: {fileID: 2795160004087675521}
 --- !u!1 &6977258524785111166
 GameObject:

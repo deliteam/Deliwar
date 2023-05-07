@@ -183,6 +183,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3824190405813878088, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824190405813878088, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824190405813878088, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824190405813878088, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359359639301262360, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359359639301262360, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 320d750b01ac4454e9fa500e3b94f291, type: 3}
     - target: {fileID: 7574964561473983987, guid: bf50636b3d7914d4babc3410631583d5, type: 3}
       propertyPath: m_Name
       value: MenuStart Canvas

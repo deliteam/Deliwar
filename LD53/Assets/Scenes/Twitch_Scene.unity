@@ -311,6 +311,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 395487537, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395487537, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395487537, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395487537, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 511715826, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 511715826, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 320d750b01ac4454e9fa500e3b94f291, type: 3}
+    - target: {fileID: 902457663423260336, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 902457663423260336, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 320d750b01ac4454e9fa500e3b94f291, type: 3}
+    - target: {fileID: 1194403682773926486, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194403682773926486, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194403682773926486, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194403682773926486, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7020707134086410832, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
       propertyPath: m_Name
       value: TwitchCanvas
@@ -398,6 +446,10 @@ PrefabInstance:
     - target: {fileID: 7020707134086410844, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140167137782886513, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e3ba59ef887d924fac7b64d8c26995a, type: 3}
